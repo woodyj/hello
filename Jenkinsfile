@@ -9,14 +9,12 @@ node {
     environment { 
         CC = 'clang'
     }
-    stages {
-        stage('Example2') {
-            environment { 
-                DEBUG_FLAGS = '-g'
-            }
-            steps {
-                sh 'printenv'
-            }
+    stage('Example2') {
+        environment { 
+            DEBUG_FLAGS = '-g'
+        }
+        steps {
+            sh 'printenv'
         }
     }
     stage('Build') {
